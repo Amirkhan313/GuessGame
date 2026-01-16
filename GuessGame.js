@@ -84,7 +84,6 @@ const checkResult = () => {
 };
 
 // savePrevScore tp localStorage
-
 let reload_game = document.getElementsByClassName("reload_game")[0];
 reload_game.addEventListener("click", () => {
     gameOver = false;
