@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="bg-gray-700 flex justify-center items-center h-screen">
+
+    <p class="winningMessage hidden">Excellent! You guessed the correct number!</p>
+    <button
+        class="reload_game hidden px-4 py-2 rounded-md text-white cursor-pointer bg-linear-to-l from-blue-600 to-fuchsia-500 shadow-[0_10px_30px_rgba(208,30,247,0.45)] hover:shadow-[0_15px_40px_rgba(168,20,247,0.6)] hover:text-[16.5px] transition-all">
+        play again!
+    </button>
+    <div class="container w-[50%] text-center">
+        <div class="welcome_page w-full relative">
+            <h1 class="text-6xl font-bold text-gray-300/70">Welcome to GuessGame!</h1>
+            <button type="submit"
+                class="startGame px-6 py-3 rounded-xl text-white font-semibold bg-gradient-to-r from-pink-500 to-purple-600 shadow-[0_10px_30px_rgba(168,85,247,0.45)] hover:shadow-[0_15px_40px_rgba(168,85,247,0.6)] cursor-pointer hover:text-[16.5px] transition-all">
+                Start the Game!
+            </button>
+        </div>
+
+        <div class="game_container">
+            <div id="game" class="game px-10 py-6 w-full  bg-sky-200">
+                <div class="header text-center">
+                    <p class="text-[25px] text-amber-800 font-bold">Between ( 1 and 20 )</p>
+                </div>
+
+                <div class="main_section mt-6">
+                    <h1 class="w-100% text-4xl font-bold mb-10">Guess the correct number! </h1>
+                    <p class=" left-[50%] text-7xl font-bold random_bum">?</p>
+                    <div class="sub_section flex justify-around mt-15">
+                        <section action="" class="flex flex-col items-center mt-2">
+                            <input type="text" placeholder="Enter number..."
+                                class="inputValue border font-bold text-center border-gray-300 bg-gray-500 text-white text-2xl w-[200px] rounded-md px-4 py-6 mb-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400">
+                            <button class="check_btn py-2.5 w-[140px] bg-gray-600 text-white rounded-lg cursor-pointer shadow-[0_6px_20px_rgba(0,0,0,0.6)]
+                        hover:shadow-[0_10px_30px_rgba(0,0,0,0.8)]
+                        transition-all"  onclick="checkResult()"> check the result</button>
+                        </section>
+
+                        <div class="score_result w-50 text-left  space-y-4">
+                            <p class="text-[20px] font-bold description mb-6">Start guessing.....!</p>
+                            <p class="text-[18px] ms-5">💯From : <span id="score">20</span></p>
+                            <p class="text-[18px] ms-5">🎖️You got : <span id="final_score">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overly"></div>
+    </div>
+</body>
+
+</html>
+<script src="GuessGame.js"></script>
